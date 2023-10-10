@@ -1,0 +1,805 @@
+:root
+{
+    --main-color:#2c4755;
+    --secondary-color:#10cab7;
+    --swiper-navigation-size: 22px !important;
+
+}
+:html
+{
+
+}
+/* Navbar Start */
+.navbar
+{
+    /* background-image: url(../Images/food-9.jpg) !important; */
+    /* background-size: cover; */
+    /* background-repeat: no-repeat; */
+    padding: 30px !important;
+    background-color:var(--main-color) !important;
+    z-index: 999 !important;
+}   
+
+.navbar .navbar-brand
+{
+    font-family: 'Amatic SC';
+    color: white !important;
+    font-size: 40px;
+}
+
+.navbar .navbar-brand i
+{
+margin-right: 10px;
+}
+.navbar .nav-link
+{
+    font-family: 'Amatic SC';
+    color: white !important;
+    font-size: 20px;
+    margin: 0 10px;
+}
+.navbar .basket
+{
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.navbar .basket .badge
+{
+    font-size: 12px;
+    position: absolute;
+}
+/* Navbar End */
+
+/* Header Start */
+.header-section
+{
+    /* margin-top: 20px; */
+    height: 600px;    
+    background-image: url(../Images/food-5.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.header-section .text
+{
+    color: white;
+    font-size: 40px;
+    font-family: 'Amatic SC';
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    letter-spacing: 1.6px;
+}
+
+/* Header End */
+
+.special-heading
+{
+text-align: center;
+font-size: 100px;
+color: #ebeced;
+margin:30px 0 0 0;
+font-weight: 800;
+letter-spacing: -3px;
+}
+.special-heading +p
+{
+color: #777;
+font-size: 20px;
+text-align: center;
+margin: -30px 0 0;
+}
+/* Services-Section Start */
+
+.services
+{
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.services .service
+{
+    flex-basis: 50%;
+    margin:40px 0 0;
+    text-align: center;
+}
+.services .service i
+{
+    font-size: 40px;
+    color: var(--main-color);
+}
+.services .service .service-title
+{
+    font-family: 'Amatic SC';
+    font-size: 40px;
+    font-weight: 500;
+}
+.services .service .service-details
+{
+    color: #777;
+    width: 400px;
+    margin: auto;
+    line-height: 1.6;
+    letter-spacing: 0.6px;
+}
+
+/* Services-Section End */
+
+/* Shooping Start */
+/* .cards
+{
+    margin-top:50px ;
+    height: 650px;
+    background-image: url(../Images/food-6.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+} */
+/* .cards .card
+{
+    width: 400px;    
+}
+.cards .card img
+{
+    height: 400px;
+} */
+
+/* Shooping End */
+/*  */
+
+/*  */
+.swiper-wrapper
+{
+    height: 50% !important;
+}
+.swiper
+{
+    display: flex !important;
+}
+
+.slide-content
+{
+    max-width: 600px;
+    width: 100%;
+}
+.swiper-button-next,
+.swiper-button-prev
+{
+    color: var(--main-color) !important;
+    background-color: white;
+    border-radius: 50%;
+    padding: 22px;
+    font-weight: bold;
+    width: calc(var(--swiper-navigation-size)/ 44 * 27) !important;
+    height: 12px !important;
+    transition: 0.3s;
+}
+.swiper-button-next:hover,
+.swiper-button-prev:hover
+{  
+    color: white !important;
+    background-color: var(--main-color);
+    transform: translateY(-4px)
+}
+
+/* Modal Start  */
+.modal .modal-footer
+{
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+}
+.modal img
+{
+    vertical-align: middle;
+    border-style: none;
+    height: 271px;
+    border-radius: 20px;
+}
+.modal .modal-title
+{
+    margin: auto;
+    font-size: 40px;
+    color: #f8f9fa;
+    font-weight: bold;
+    font-family: 'Amatic SC';
+
+}
+.modal .modal-header
+{
+    background-color: var(--main-color)
+}
+
+.modal .modal-body
+{
+    color: #777;
+}
+.modal .modal-footer span
+{
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--main-color);
+    font-family: 'Amatic SC';
+
+}
+.modal .modal-footer button
+{
+    background-color: var(--main-color);
+    color: white;
+    transition: 0.3s;
+}
+.modal .modal-footer button:hover
+{
+    transform: translateY(-4px)
+}
+
+/* Modal End  */
+
+/* Card Start */
+/* 
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i'); */
+
+
+.cards {
+    display: flex;
+    margin-top:50px ;
+    height: 480px;
+    background-image: url(../Images/food-6.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    align-items: center;
+}
+
+.card__info .read,
+.card__info .add
+
+{
+    background-color: var(--main-color);
+    color: white;
+}
+
+.card--1 .card__img, .card--1 .card__img--hover {
+    background-image: url('../Images/food-1.jpg');
+}
+
+.card--2 .card__img, .card--2 .card__img--hover {
+    background-image: url('../Images/food-2.jpg');
+}
+.card--3 .card__img, .card--3 .card__img--hover {
+    background-image: url('../Images/food-3.jpg');
+}
+.card--4 .card__img, .card--4 .card__img--hover {
+    background-image: url('../Images/food-4.jpg');
+}
+.card--5 .card__img, .card--5 .card__img--hover {
+    background-image: url('../Images/food-5.jpg');
+}
+.card--6 .card__img, .card--6 .card__img--hover {
+    background-image: url('../Images/food-6.jpg');
+}
+
+.card__like {
+    width: 18px;
+}
+.card__img {
+    visibility: hidden;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 235px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    
+}
+
+.card__info-hover {
+    position: absolute;
+    padding: 16px;
+    width: 100%;
+    opacity: 0;
+    top: 0;
+}
+
+.card__img--hover {
+  transition: 0.2s all ease-out;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+  position: absolute;
+    height: 235px;
+  border-top-left-radius: 12px;
+border-top-right-radius: 12px;
+top: 0;
+  
+}
+.card {
+  /* margin-right: 25px; */
+  transition: all .4s cubic-bezier(0.175, 0.885, 0, 1);
+  background-color: #fff;
+    width: 33.3%;
+  position: relative;
+  border-radius: 1.25rem !important; 
+  overflow: hidden;
+  box-shadow: 0px 13px 10px -7px rgba(0, 0, 0,0.1);
+  height: 337px !important;
+  width: 330px !important;
+}
+.card:hover {
+  box-shadow: 0px 30px 18px -8px rgba(0, 0, 0,0.1);
+    transform: scale(1.10, 1.10);
+}
+
+.card__info {
+    z-index: 2;
+    background-color: #fff;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    padding: 16px 24px 24px 24px;
+}
+
+.card__category {
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 2px;
+    font-weight: 500;
+    color: #868686;
+}
+
+.card__title {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-family: 'Roboto Slab', serif;
+}
+
+.card__by {
+    font-size: 12px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+}
+
+.card__author {
+    font-weight: 600;
+    text-decoration: none;
+    color: #AD7D52;
+}
+
+.card:hover .card__img--hover {
+    height: 100%;
+    opacity: 0.3;
+}
+
+.card:hover .card__info {
+    background-color: transparent;
+    position: relative;
+}
+
+.card:hover .card__info-hover {
+    opacity: 1;
+}
+
+/* Card End */
+/* food-display Start */
+.food-display
+{
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.food-display .card
+{
+    flex-basis: 45%;
+}
+ .print
+{
+    position: absolute;
+    left: 50%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color: white;
+    background-color: var(--main-color);
+    transition: 0.3s !important;
+}
+.print:hover
+{
+    transform: translateY(-4px);
+}
+/* food-display End*/
+.up
+{
+    position: fixed;
+    bottom: 10px;
+    right: -50px;
+    background-color: white;
+    color: var(--main-color);
+    padding: 8px;
+    border: 2px solid var(--main-color);
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    z-index: 9999;
+    transition: 0.2s;
+}
+.up:hover
+{
+    background-color: var(--main-color);
+    color: white;
+}
+.up.show
+{
+    right: 20px;
+}
+
+/* contact-us Start */
+.contact-us .container
+{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px;
+    flex-wrap: wrap;
+}
+.contact-us .container .card
+{
+    flex-basis: 30%;
+    height: 500px !important;
+    text-align: center;
+    align-items: center;
+}
+.contact-us  .card .card-img-top
+{
+    height: 300px !important;
+}
+
+.contact-us .container form
+{
+    flex-basis: 65%;
+    background-image: url(../Images/food-5.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 23px;
+    border-radius: 30px;
+}
+.form-group .form-control:focus
+{
+    outline: none;
+}
+.form-group label
+{
+    color: white !important;
+}
+form button
+{
+    background-color: var(--main-color);
+    color: white;
+    font-weight: bold;
+    transition: 0.3s;
+}
+form button:hover
+{
+    color: var(--main-color);
+    background-color: white;
+    font-weight: bold;
+
+}
+.card .card-body
+{
+    flex: 0 !important;
+}
+.card  .number
+{
+    flex: 1;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    color: var(--main-color);
+    font-size: 20px;
+    margin-bottom: 33px;
+}
+.card .card-btns
+{
+    padding: 12px;
+}
+.card .card-btns button
+{
+    background-color: var(--main-color);
+    color: white;
+    padding: 15px;
+    transition: 0.3s;
+}
+.card .card-btns button:hover
+{
+    transform: translateY(-3px);
+}
+.card .card-btns button i
+{
+    font-size: 20px;
+}
+.card .card-title
+{
+    color: var(--main-color);
+    font-size: 30px;
+    font-family: 'cursive';
+
+}
+
+.card-contact:hover
+{
+    box-shadow: none;
+    transform: none;
+}
+
+/* contact-us End */
+
+
+/* Comment Start */
+
+.comment .container
+{
+    margin-top: 50px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.comment .special-heading+p
+{
+    margin-bottom: 50px;
+}
+.comment .commet-field
+{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+        
+}
+.comment .commet-field .form-control
+{
+    flex: 1;
+    margin:0 20px;
+    width: 100px;
+}
+.commet-field .post
+{
+    color: white;
+    background-color: var(--main-color);
+    transition: 0.3s;
+}
+.commet-field .post:hover
+{
+    transform: translateY(-4px);
+}
+/* Comment End */
+/* footer Start */
+.footer
+{
+    height: 300px;
+    position: relative;
+    bottom: 0;
+    background-image: url(../Images/food-9.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 100px;
+
+}
+.footer .text
+{
+    position: absolute;
+    top: 40%;
+    left: 35%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+    font-size: 30px;
+    color: white;
+}
+.footer .text span
+{
+    color: var(--main-color);
+    font-weight: bold;
+}
+
+.footer .overlay
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 20%);
+}
+.footer .icons
+{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    color: white;
+    font-size: 30px;
+}
+/* footer End */
+.CardDisplay
+{
+    width: 400px !important;
+    height: 457px !important;
+    flex-basis: 30% !important;
+    margin: 20px 0;
+}
+.CardDisplay img
+{
+    max-height: 223px;
+}
+.CardDisplay .btn
+{
+    font-size: 7px;
+    color: white;
+    background-color: var(--main-color);
+    font-weight: bold;
+    margin: 0 8px;
+}
+.CardDisplay .quantity
+{
+    font-size: 22px;
+    color: var(--main-color);
+    font-weight: bold;
+}
+.CardDisplay .count
+{
+    display: flex;
+    align-items: center;
+}
+.CardDisplay .remove
+{
+    position: absolute;
+    right: -10px;
+    top: -4px;
+    font-size: 22px;
+    background-color: red !important;
+    border-radius: 6px;
+}
+.CardDisplay .priceVal
+{
+    position: absolute;
+    right: 29px;
+    bottom: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+ .container .total-price
+{
+    display: block;
+    width: 100%;
+    margin: auto;
+    background-color: var(--main-color);
+    text-align: center;
+    color: white;
+    border-radius: 20px;
+    padding:10px ;
+} 
+.total-price .totaly
+{
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+
+/* Comments Start */
+.comments
+{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.comments .media
+{
+    position: relative;
+    margin-bottom: 30px;
+}
+.comments .media .mediaImg
+{
+    border-radius: 50%;
+    height: 67px;
+    width: 68px;
+}
+.comments .media .mediaName
+{
+    color: var(--main-color);
+    font-weight: bold;
+    margin: auto;
+}
+.comments .media .mediaText
+{
+color: #777;
+}
+
+.media .dropdown
+{
+    position: absolute;
+    right: 0;
+    font-size: 20px;
+    top: -10px;
+    font-size: 10px !important;
+}
+.media .del
+{
+    background-color: var(--main-color);
+    color: white;
+    position: absolute;
+    right: -10px;
+    top: -8px;
+    padding: 2px;
+    border-radius: 50%;
+    font-weight: bold;
+    height: 27px;
+    width: 22px;
+    text-align: center;
+    cursor: pointer;
+}
+
+  /* Comments End */
+@media(width <= 700px)
+{
+    .food-display .card
+    {
+        flex-basis: 100% !important;
+    }
+    .header-section .text
+    {
+        font-size: 24px;
+    }
+    .services .service
+    {
+        margin: 40px auto;
+    }
+    .contact-us .container form
+    {
+        flex-basis: 60% !important;
+        margin: 30px auto;
+    }
+        .contact-us .container .card
+    {
+        flex-basis: 60% !important;
+        margin: 30px auto;    
+    }
+    
+    .footer .text 
+    {
+    left: 24%;
+    }
+}
+
+
+@media(700px < width <= 992px  )
+{
+    .food-display .card
+    {
+        flex-basis: 45% !important;
+    }
+    .services .service
+    {
+        margin: 40px auto;
+    }
+    .contact-us .container form
+    {
+        flex-basis: 60% !important;
+        margin: 30px auto;
+        }
+    .contact-us .container .card
+    {
+        flex-basis: 60% !important;
+        margin: 30px auto;    
+    }
+}
