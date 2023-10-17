@@ -3,7 +3,6 @@ let CardSwiper = document.querySelector(".cards-swiper");
 let basket = document.querySelector(".basket .badge");
 let basketBtn = document.querySelector(".basket ");
 let total = document.querySelector(".total-price");
-// let comment = document.querySelector(".comment");
 
 let AddedItem = [];
 let Foods = [
@@ -48,7 +47,8 @@ let Foods = [
         name: "Corn Flour",
         price: "30",
         
-    }
+    },
+
 ]
 
 // Create Foods Slider Items
@@ -67,7 +67,7 @@ function FoodCards() {
     <span class="card__category">${Food.name}</span>
     <h3 class="card__title">${Food.name}</h3>
     <button class="btn read" data-toggle="modal" data-target="#staticBackdrop-${Food.id}"><i class='fas fa-book-open'></i></button>
-    <button class="btn add" onclick = "AddTotCart(${Food.id})"><i class='fa fa-plus'></i></button>
+    <button class="btn add" onclick = "AddTotCart(${Food.id})"><i class='fa-solid fa-cart-shopping'></i></button>
     </div>
     </div>
         `
@@ -119,6 +119,8 @@ function RenderSubTotal()
         <p class="totaly">Total Price is : ${totalPrice.toFixed(2)}$</p><p class="totalItems">(${totlaItems})Items</p>
         `
         }
+ 
+    
     })
     SendPrice(totalPrice , totlaItems);
 }
@@ -227,24 +229,20 @@ GetFromStorage()
 var swiper = new Swiper(".slide-content", {
     slidesPerView: 3,
     spaceBetween: 25,
-    // loop: 'true',
+    loop: 'true',
+    
     centerSlide: 'true',
     fade: 'true',
     grabCursor: 'true',
     pagination: {
         el: ".swiper-pagination",
         clickable: true,
-        // dynamicBullets: true,
     },
     navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
     },
 });
-
-
-if(CardSwiper)
-{
 
 let span = document.querySelector(".up");
 
@@ -266,94 +264,12 @@ span.onclick = ()=>
         behavior:"smooth",
     })
 }
-}
-let CommentsDiv = document.querySelector(".comments");
-let CommentImg = document.querySelector(".image_input");
-let mediaImg = document.querySelector(".mediaImg");
-let CommentName = document.querySelector(".full_name");
-let CommentText = document.querySelector(".comment_text");
-let PostBtn = document.querySelector(".post");
-let CommentArr = [];
-let img;
-if(CommentsDiv){
 
-    CommentImg.addEventListener("change" , ()=>{
-    img = URL.createObjectURL(CommentImg.files[0])
-    console.log(img)
-})
-PostBtn.addEventListener("click" , ()=>{
-    if(CommentName.value !="" && CommentText.value !="")
-    {
-        CreateCommentArr(CommentName.value , CommentText.value , img)
-        CommentName.value = "";
-        CommentText.value = "";
-    }
-})
-
-function CreateCommentArr(CommentN , CommentT ,CommentI)
-{
-
-    let Com =
-    {
-        id:Date.now(),
-        name:CommentN,
-        text:CommentT,
-        image:CommentI
-    }
-    CommentArr.push(Com)
-    console.log(CommentArr)
-    DisplayCommentArr(CommentArr);
-    CommentStorage(CommentArr)
-
-}
-
-function DisplayCommentArr(CommentArr)
-{
-    CommentsDiv.innerHTML ="";
-    CommentArr.forEach((comment)=>{
-        CommentsDiv.innerHTML +=
-        `
-    <div class="media">
-    <div class = "     del " onclick="deleteComment(${comment.id})">X</div>
-        <img src="${comment.image}" class="mr-3 mediaImg" alt="..." width="100px">
-        <div class="media-body">
-        <h5 class="mt-0  mediaName">${comment.name}</h5>
-        <p class="mediaText">${comment.text}</p>
-        </div>
-    </div>    
-        `
-    })
-
-}
-
-function CommentStorage(CommentArr)
-{
-    localStorage.setItem("Comments" , JSON.stringify(CommentArr))
-}
-function CommentGetStorage()
-{
-    let CommentGet = JSON.parse(localStorage.getItem("Comments"));
-    if(CommentGet)
-    {
-        CommentArr = CommentGet;
-    }
-    DisplayCommentArr(CommentArr)
-}
-CommentGetStorage()
-
-function deleteComment(id)
-{
-    CommentArr = CommentArr.filter((ele)=>ele.id !== id); 
-    DisplayCommentArr(CommentArr);
-    CommentStorage(CommentArr)
-}
-
-}
-
-    
 let printBtn  = document.querySelector(".print");
 $(document).ready(function(){
     $(printBtn).click(()=>{
         $('.cofod').printThis();
         })
 })
+
+

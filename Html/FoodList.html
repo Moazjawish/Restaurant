@@ -40,68 +40,90 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <title>CRUD | Moaz</title>
+ 
+
+    <!--FONT AWESOME-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>RESTAURANT | Moaz</title>
   </head>
   <body>
 <!-- NavBar Start -->
 <nav class="navbar navbar-expand-lg sticky-top  navbar-light ">
-    <a class="navbar-brand" href="/Html/index.html"><i class='fa fa-cutlery'></i>Restaurant</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
-        <li class="nav-item">
-        <a class="nav-link" href="#services">Sevices</a>
+  <a class="navbar-brand" href="/Html/index.html"><i class='fa fa-cutlery'></i>Restaurant</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+  <ul class="navbar-nav">
+      <li class="nav-item">
+      <a class="nav-link" href="#services">Sevices</a>
+      </li>
+      <li class="nav-item">
+      <a class="nav-link" href="#food">Food</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/Html/menus.html">Menus </a>
         </li>
-        <li class="nav-item">
-        <a class="nav-link" href="#">Food</a>
+      <li class="nav-item">
+      <a class="nav-link" href="/Html/Contact.html">Contact Us</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="/Html/aboutUs.html">About us </a>
         </li>
-    </ul>
-    </div>
-    <a href="/Html/FoodList.html"><span class="nav-link basket"><i class='fa-solid fa-cart-shopping'></i><span class="badge badge-danger">0</span></a>
+  </ul>
+  </div>
+  <a href="/Html/FoodList.html"><span class="nav-link basket"><i class='fa-solid fa-cart-shopping'></i><span class="badge badge-danger">0</span></a>
 </span>
 </nav>
+
+<!-- Create Button Start -->
+<sapn class="up"><i class='fa-solid fa-angles-up'></i></sapn>
+<!-- Create Button End -->
+
+
 <!-- Foods Display Start -->
 <div class="container cofod">
 <div class="food-display ">
-<!-- Card Start -->
-  <!-- <div class="card CardDisplay" style="width:400px"  id="3">
-    <img class="card-img-top" src="../Images/food-3.jpg" alt="Card image" style="width:100%">
-    <div class="card-body">
-    <h4 class="card-title">chickem</h4>
-    <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
-    <div class="count">
-    <button   class="btn minus " onclick="changeQuantity('minus',3)" ><i class='fa fa-minus'></i></button>
-    <span class = "quantity">1</span>
-    <button  class="btn plus "   onclick="changeQuantity('plus' , 3)" ><i class='fa fa-plus'></i></button>
-    </div>  
-    <button  class="btn remove">x</i></button>
-  </div>
-  <div class="price">
-    <span class="priceVal">Price : 200$</span>
-  </div>
-</div> -->
-<!-- Card End -->
-
 </div>
 <div class="total-price">
   <p class="totaly"></p><p class="totalItems"> </p>
 </div>
+<div class="btn print"><i class='fa fa-print'></i></div>
 </div>
-<div class="btn print">Print</div>
 
-<!-- Foods Display End -->
-<div class="footer">
-  <div class="overlay"></div>
-  <div class="text">
-      <i class='fa fa-cutlery'></i>
-      <p>© 2022 <span>Ratatoiulle </span>All Right Reserved</p>
+<!-- Footer Start -->
+
+<footer>
+  <div class="footer">
+    <div class="row footer-icons">
+      <a href="https://www.facebook.com/moaz.jawish.1" target="_blank"><i class="fa fa-facebook"></i></a>
+      <a href="https://www.instagram.com/js_restaurant3/" target="_blank"><i class="fa fa-instagram"></i></a>
+      <a href="https://www.youtube.com/@bonappetit" target="_blank"><i class="fa fa-youtube"></i></a>
+      <a href="#"><i class="fa fa-twitter"></i></a>
+      </div>
+  
+  <div class="row">
+  <ul>
+  <li><a href="../Html/Contact.html">Contact us</a></li>
+  <li><a href="">Our Services</a></li>
+  <li><a href="">Privacy Policy</a></li>
+  <li><a href="">Terms & Conditions</a></li>
+  <li><a href="">Career</a></li>
+  </ul>
   </div>
-</div> 
+  
+  <div class="row-title">
+  <p><span class="footer-span">RESTAURANT</span> Copyright © 2023 restaurant - All rights reserved || Designed By: <span class="footer-span">Moaz</span></p> 
+  </div>
+  </div>
+  </footer>
+
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="../Js/Main.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/printThis/1.15.0/printThis.min.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
 
 </body>
 </html>

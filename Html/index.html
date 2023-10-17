@@ -40,7 +40,11 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <title>CRUD | Moaz</title>
+
+<!--FONT AWESOME-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>RESTAURANT | Moaz</title>
   </head>
   <body>
 <!-- NavBar Start -->
@@ -57,31 +61,45 @@
         <li class="nav-item">
         <a class="nav-link" href="#food">Food</a>
         </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/Html/menus.html">Menus </a>
+            </li>
+        <li class="nav-item">
+        <a class="nav-link" href="/Html/Contact.html">Contact Us</a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" href="/Html/aboutUs.html">About us </a>
+            </li>
     </ul>
     </div>
     <a href="/Html/FoodList.html"><span class="nav-link basket"><i class='fa-solid fa-cart-shopping'></i><span class="badge badge-danger">0</span></a>
 </span>
 </nav>
 
+<!-- NavBar End -->
 
 <!-- Create Button Start -->
 <sapn class="up"><i class='fa-solid fa-angles-up'></i></sapn>
 <!-- Create Button End -->
 
 
-<!-- NavBar End -->
 <!-- Header Start -->
 
     <div class="header-section">
-        <div class="text"><i class='fa fa-quote-left'></i> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum, quas.
+        <video src="../Images/pexels-vanessa-loring-5866122 (1080p).mp4" autoplay  autoplay="" muted loop="" ></video>
+        <div class="text">
+            <i class='fa fa-quote-left'></i> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum, quas.
             Enim, omnis nam! Quam similique omnis dolores asperiores dolor modi ex,
             doloremque aperiam vitae nisi, saepe, at quas enim nulla. <i class='fa fa-quote-right'></i></div>
     </div>
 
 <!-- Header End -->
 <!-- Services  Start-->
+<div id="services" ></div>
+<br><br><br><br><br>
 <div class="container">
-    <h2 class="special-heading" id="services">Services</h2>
+    <h2 class="special-heading" >Services</h2>
     <p>Don't be busy, be productive</p>
     <div class="services" >
         <!-- Service Start -->
@@ -125,8 +143,11 @@
 </div>
 <!-- Services  End-->
 
-    <!--  Shooping Start -->
-    <h2 class="special-heading" id="food">Special Food</h2>
+<!--  Shooping Start -->
+<div id="food" ></div>
+<br><br><br><br><br>
+
+    <h2 class="special-heading" >Special Food</h2>
     <p>Don't be busy, be productive</p>
     <div class="cards swiper">
         <div class="slide-content">
@@ -159,7 +180,7 @@
         beatae perferendis? Autem, error accusamus? Quasi!
         </div>
         <div class="modal-footer">
-            <span>Price : 150$</span>
+            <span>Price : 15$</span>
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         </div>
     </div>
@@ -181,7 +202,7 @@
         beatae perferendis? Autem, error accusamus? Quasi!
         </div>
         <div class="modal-footer">
-            <span>Price : 800$</span>
+            <span>Price : 35$</span>
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         </div>
     </div>
@@ -203,7 +224,7 @@
         beatae perferendis? Autem, error accusamus? Quasi!
         </div>
         <div class="modal-footer">
-            <span>Price : 230$</span>
+            <span>Price : 23$</span>
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         </div>
     </div>
@@ -225,7 +246,7 @@
         beatae perferendis? Autem, error accusamus? Quasi!
         </div>
         <div class="modal-footer">
-            <span>Price : 600$</span>
+            <span>Price : 60$</span>
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         </div>
     </div>
@@ -247,7 +268,7 @@
         beatae perferendis? Autem, error accusamus? Quasi!
         </div>
         <div class="modal-footer">
-            <span>Price : 100$</span>
+            <span>Price : 10$</span>
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         </div>
     </div>
@@ -269,7 +290,7 @@
         beatae perferendis? Autem, error accusamus? Quasi!
         </div>
         <div class="modal-footer">
-            <span>Price : 300$</span>
+            <span>Price : 30$</span>
         <button type="button" class="btn " data-dismiss="modal">Close</button>
         </div>
     </div>
@@ -277,96 +298,37 @@
 </div>
 <!-- End Mod -->
 <!-- Moadal End -->
-<!-- Contact us Start -->
-<div class="contact-us">
-    <h2 class="special-heading">Contact Us</h2>
-    <p>Don't be busy, be productive</p>
-    <div class="container">
-        <div class="card card-contact" style="width: 18rem;">
-            <img src="../Images/ricky-singh-YBfbVXvUsog-unsplash.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-            <h5 class="card-title">Ratatoiulle</h5>
-            </div>
-            <div class="number">
-                <span class="card-text">+963-37746969</span>
-                <span><i class='fa fa-phone'></i></span>
-            </div>
-            <div class="card-btns">
-                <button class="btn"><i class='fa-solid fa-cart-shopping'></i></button>
-                <button class="btn"><i class='fa fa-vcard'></i></button>
-                <button class="btn"><i class='fa fa-font-awesome'></i></button>
-                <button class="btn"><i class='fa fa-phone'></i></button>
-            </div>
-        </div>
-        <!--  -->
-        <form>
-            
-            <div class="form-group">
-            <label for="exampleInputPassword1">First Name</label>
-            <input type="password" class="form-control" id="exampleInputPassword1">
-            </div>
-            <div class="form-group">
-            <label for="exampleInputPassword2">Second Name</label>
-            <input type="password" class="form-control" id="exampleInputPassword2">
-            </div>
-            <div class="form-group">
-                <label for="exampleInputEmail3">Email address</label>
-                <input type="email" class="form-control" id="exampleInputEmail3"  >
-                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-                </div>
-            <div class="form-group">
-            <label for="exampleInputPassword4">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword4">
-            </div>
-            <div class="form-group form-check">
-            </div>
-            <button type="submit" class="btn ">Submit</button>
-        </form>
-    
-</div>
-</div>
-
-<!-- Contact us End -->
-<!-- Comment Start -->
-<div class="comment">
-    <h2 class="special-heading">Comments</h2>
-    <p>Don't be busy, be productive</p>
-    <div class="container ">
-    <div class="commet-field col-lg-6">
-        
-        <!-- <label for=" image_input"> -->
-        <!-- <i class='fa fa-font-awesome'></i> -->
-        <input type="file" class="form-control image_input">
-        <!-- </label> -->
-        
-        <input type="text" class="form-control full_name" name="">
-        <input type="text"  class="form-control comment_text"></input>
-        <button class=" btn post"><i class='fa fa-mail-forward'></i></button>
-    </div>
-    <div class="comments" >
-        <!-- Start Media -->
-        <!-- End Media -->
-    </div>
-    <!-- Comments -->
-</div>
-</div>
-<!-- Comment End -->
-
 
 <!-- Footer Start -->
-<div class="footer">
-    <div class="overlay"></div>
-    <div class="text">
-        <i class='fa fa-cutlery'></i>
-        <p>© 2022 <span>Ratatoiulle </span>All Right Reserved</p>
+<footer>
+    <div class="footer">
+        <div class="row footer-icons">
+            <a href="https://www.facebook.com/moaz.jawish.1" target="_blank"><i class="fa fa-facebook"></i></a>
+            <a href="https://www.instagram.com/js_restaurant3/" target="_blank"><i class="fa fa-instagram"></i></a>
+            <a href="https://www.youtube.com/@bonappetit" target="_blank"><i class="fa fa-youtube"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            </div>
+    
+    <div class="row">
+    <ul>
+    <li><a href="../Html/Contact.html">Contact us</a></li>
+    <li><a href="">Our Services</a></li>
+    <li><a href="">Privacy Policy</a></li>
+    <li><a href="">Terms & Conditions</a></li>
+    <li><a href="">Career</a></li>
+    </ul>
     </div>
-</div> 
-<!-- Footer End -->
-<!-- <div class="food-display ">
-</div>> -->
+    
+    <div class="row-title">
+    <p><span class="footer-span">RESTAURANT</span> Copyright © 2023 restaurant - All rights reserved || Designed By: <span class="footer-span">Moaz</span></p> 
+    </div>
+    </div>
+    </footer>
+  
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="../Js/Main.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/printThis/1.15.0/printThis.min.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
 
 </body>
 </html>

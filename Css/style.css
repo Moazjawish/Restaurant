@@ -3,20 +3,31 @@
     --main-color:#2c4755;
     --secondary-color:#10cab7;
     --swiper-navigation-size: 22px !important;
-
 }
-:html
-{
+html {
+    scroll-behavior: smooth;
+  }
+body
+{ 
+    min-height: 100vh; 
+    margin: 0; 
+    
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
 
+footer{ 
+    min-height:50px; 
 }
 /* Navbar Start */
 .navbar
 {
-    /* background-image: url(../Images/food-9.jpg) !important; */
-    /* background-size: cover; */
-    /* background-repeat: no-repeat; */
+    /* background-image: url(../Images/food-5.jpg) !important;
+    background-size: cover;
+    background-repeat: no-repeat; */
     padding: 30px !important;
     background-color:var(--main-color) !important;
+
     z-index: 999 !important;
 }   
 
@@ -54,23 +65,55 @@ margin-right: 10px;
 /* Header Start */
 .header-section
 {
-    /* margin-top: 20px; */
-    height: 600px;    
-    background-image: url(../Images/food-5.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+ 
     position: relative;
+    /* max-height: 600px; */
 }
-
-.header-section .text
+ 
+.header-section video
 {
-    color: white;
-    font-size: 40px;
+    width: 100%;
+    /* height: 100%; */
+}
+.header-section::before
+{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 10%)
+ 
+}
+.header-section .text {
+    /* color: white;
+    font-size: 29px;
     font-family: 'Amatic SC';
     position: absolute;
-    top: 30%;
+    top: 20%;
     left: 10%;
     letter-spacing: 1.6px;
+    max-width: 50%;
+    line-height: 61px; */
+    color: white;
+    font-size: 29px;
+    font-family: 'Amatic SC';
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    letter-spacing: 1.6px;
+    max-width: 50%;
+    line-height: 61px;    
+    padding: 50px;
+}
+.header-section .text::before
+{
+    content: '';
+    position: absolute;
+    border-radius: 20px;
+    background-color: #2c475591;
+
 }
 
 /* Header End */
@@ -127,30 +170,203 @@ margin: -30px 0 0;
 }
 
 /* Services-Section End */
-
-/* Shooping Start */
-/* .cards
-{
-    margin-top:50px ;
-    height: 650px;
-    background-image: url(../Images/food-6.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-
+/* Start Menus */
+/* @import url(https://fonts.googleapis.com/css?family=Dosis:600,200|Great+Vibes); */
+/* *, *:after, *:before {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
 } */
-/* .cards .card
-{
-    width: 400px;    
+.Menu_Section{
+    margin:40px auto;position: relative;}
+
+
+
+
+section {
+  background: var(--main-color);
+  width: 80vw;
+  max-width: 80rem;
+  min-width: 390px;
+  height: 40rem;
+  min-height: 975px;
+  margin: 4rem auto;
+  box-shadow: 0 0 6px rgba(0,0,0,.4);
 }
-.cards .card img
+article {
+  position: absolute;
+  left: 0;
+  top: 5rem;
+  right: 0;
+  bottom: 0;
+  padding: 1rem 2rem 0;
+  overflow: auto;
+  transition: .7s;
+  transform: scale(0);
+  transform-origin: center right;
+  transition-delay: .1s;
+}
+article:before {
+  color: rgba(0,0,0,.2);
+  font-size: 4rem;
+  font-weight: 100;
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+}
+.Menu_Section h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  text-align: center;
+  color: rgba(0,0,0,.6);
+}
+/* body > h2 {height: auto;} */
+.Menu_Section h2 img {
+  width: 120px;
+  height: auto;
+  background: #f9f9f9;
+  border: 5px solid rgba(0,0,0,.7);
+  border-radius: 50%;
+  padding: 5px;
+  display: block;
+  margin: 0 auto;
+  box-shadow: 0 0 7px rgba(0,0,0,.5);
+}
+.Menu_Section h2 span {
+  font-family: Great Vibes;
+  font-weight: 400;
+  display: block;
+  margin-bottom: 1rem;
+}
+.menu-footer ul {
+  width: 100%;
+  color: var(--main-color);
+}
+.menu-footer li {
+  list-style-type: none;
+  float: left;
+  width: 20%;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 100;  
+}
+.menu-footer li::before {
+	display: block;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 100;
+}
+p, dl, ol {
+  line-height: 1.5;
+  font-size: 1.3rem;
+}
+ol li {margin: 0 0 .5rem 1rem;}
+dt {
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-indent: 1.5rem;
+}
+.Menus-Nav {
+  background: #fff;
+  width: 100%;
+  height: 5rem;
+  box-shadow: 0 0 6px rgba(0,0,0,.4);
+}
+ 
+.Menu_Section input {
+  display: none;
+}
+.Menu_Section label {
+  width: 25%;
+  float: left;
+   color: #2c475520;
+  text-align: center;
+  cursor: pointer;
+  transition: .5s;
+  z-index: 2;
+  font-size: 30px;
+  font-weight: bold;
+  margin: 10px auto;
+}
+.Menu_Section label:hover {color: var(--main-color);}
+.Menu_Section label:before {
+  display: block;
+  font-size: 3rem;
+  line-height: 5rem;
+  z-index: 2;
+}
+#taste_canoe:checked ~ nav [for='taste_canoe'],
+#settings:checked ~ nav [for='settings'],
+#posts:checked ~ nav [for='posts'],
+#books:checked ~ nav [for='books'] {
+  color: var(--main-color);
+  font-weight: 600;
+}
+#settings:checked ~ nav [for='settings'] {}
+#taste_canoe:checked ~ nav [for='taste_canoe'] {}
+
+#taste_canoe:checked ~ nav:after {
+  left: 0;
+}
+#settings:checked ~ nav:after {
+  left:25%;
+  border-top: 0 none;
+}
+#posts:checked ~ nav:after {
+  left: 50%;
+}
+#books:checked ~ nav:after {
+  left: 75%;
+}
+
+#taste_canoe:checked ~ .taste_canoe_text,
+#settings:checked ~ .Lanch_text,
+#posts:checked ~ .Dinner_text,
+#books:checked ~ .Dessert_text {
+  display: block;
+  transform: scale(1);
+  transition-delay: .5s; 
+}
+a {color: rgba(0,0,0,.4)}
+a:hover {color: rgba(0,0,0,.2)}
+
+
+
+section .row   .side-header
 {
-    height: 400px;
-} */
+    color: white;
+    font-weight: bold;
+    margin: 10px auto 30px;
+    font-family: 'Amatic SC';
 
-/* Shooping End */
-/*  */
+}
+section  .left-side p,em
+{
+    color: rgba(255, 255, 255, 0.69);
+    font-size: 15px;
+    line-height: 32px;
+    font-family: 'Amatic SC';
 
-/*  */
+}
+.first-par
+{
+    margin-bottom: 50px;
+}
+.right-side h5
+{
+    color: white;
+    font-weight: bold;
+    font-family: 'Amatic SC';
+}
+.right-side p
+{
+    color: #ffffff61;
+    font-family: 'Amatic SC';
+
+}
+
+/* End Menus */
+
+
 .swiper-wrapper
 {
     height: 50% !important;
@@ -158,6 +374,7 @@ margin: -30px 0 0;
 .swiper
 {
     display: flex !important;
+ 
 }
 
 .slide-content
@@ -202,7 +419,7 @@ margin: -30px 0 0;
 .modal .modal-title
 {
     margin: auto;
-    font-size: 40px;
+    font-size: 30px;
     color: #f8f9fa;
     font-weight: bold;
     font-family: 'Amatic SC';
@@ -239,10 +456,6 @@ margin: -30px 0 0;
 /* Modal End  */
 
 /* Card Start */
-/* 
-@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700');
-@import url('https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i'); */
-
 
 .cards {
     display: flex;
@@ -323,7 +536,8 @@ top: 0;
   /* margin-right: 25px; */
   transition: all .4s cubic-bezier(0.175, 0.885, 0, 1);
   background-color: #fff;
-    width: 33.3%;
+
+  width: 33.3%;
   position: relative;
   border-radius: 1.25rem !important; 
   overflow: hidden;
@@ -404,6 +618,7 @@ top: 0;
 {
     position: absolute;
     left: 50%;
+    bottom: -0px;
     margin-top: 30px;
     margin-bottom: 30px;
     color: white;
@@ -447,7 +662,73 @@ top: 0;
     justify-content: space-between;
     margin-top: 60px;
     flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
 }
+/* contact_header Start */
+.contact_header
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 100px;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.contact_header h2
+{
+    color: var(--main-color);
+    font-weight: bold;
+}
+
+.contact_header p
+{
+    max-width: 400px;
+    line-height: 31.5px;
+    color: #777;
+    font-size: 16px;
+    margin-top: 30px;
+}
+.contact-us-card
+{
+    width: 80% !important;
+    margin: auto;
+    max-width: 900px !important;
+    min-height: 350px !important;
+}
+.row .no-gutters
+{
+    display: flex;
+    justify-content: space-between;
+}
+  .contact-card-img
+{
+    height: 800px;
+    width: 400px;
+}
+.contact-us-card:hover 
+{
+    transform: none;
+}
+.contact-us-card .card-title
+{
+    font-weight: bold;
+    font-size: 40px !important;
+    text-align: center;
+}
+ 
+
+.resMap
+{
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* contact_header End */
+
+
+
 .contact-us .container .card
 {
     flex-basis: 30%;
@@ -462,16 +743,34 @@ top: 0;
 
 .contact-us .container form
 {
-    flex-basis: 65%;
+    flex-basis: 100%;
     background-image: url(../Images/food-5.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     padding: 23px;
     border-radius: 30px;
+    min-width: 900px;
+    margin-bottom: 30px;
+}
+.form-group .form-control
+{
+    background: none;
+    border: none;
+    border-bottom: 1px white solid;
+    color: white;
+}
+.form-group  .text-muted
+{
+color: white !important;
 }
 .form-group .form-control:focus
 {
     outline: none;
+    background:none;
+    border: none;
+    border-bottom: 1px white solid;
+    box-shadow: none;
+    color: white;
 }
 .form-group label
 {
@@ -507,14 +806,26 @@ form button:hover
 }
 .card .card-btns
 {
-    padding: 12px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
 }
+
+.card .card-btns a
+{
+    color: white;
+    text-decoration: none;
+}
+
 .card .card-btns button
 {
     background-color: var(--main-color);
     color: white;
     padding: 15px;
     transition: 0.3s;
+    margin: 2px 3px; 
+    max-width: 47px;
+    text-align: center;
 }
 .card .card-btns button:hover
 {
@@ -538,80 +849,22 @@ form button:hover
     transform: none;
 }
 
-/* contact-us End */
-
-
-/* Comment Start */
-
-.comment .container
+.seperator
 {
-    margin-top: 50px; 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    flex-direction: column;
-}
-.comment .special-heading+p
-{
-    margin-bottom: 50px;
-}
-.comment .commet-field
-{
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 30px;
-        
-}
-.comment .commet-field .form-control
-{
-    flex: 1;
-    margin:0 20px;
-    width: 100px;
-}
-.commet-field .post
-{
-    color: white;
     background-color: var(--main-color);
-    transition: 0.3s;
+    width: 80%;
+    height: 2px;
+    margin: 50px auto;
 }
-.commet-field .post:hover
+/* contact-us End */
+.map
 {
-    transform: translateY(-4px);
+    margin-bottom: 10px ;
 }
-/* Comment End */
+
 /* footer Start */
-.footer
-{
-    height: 300px;
-    position: relative;
-    bottom: 0;
-    background-image: url(../Images/food-9.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    margin-top: 100px;
 
-}
-.footer .text
-{
-    position: absolute;
-    top: 40%;
-    left: 35%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    text-align: center;
-    font-size: 30px;
-    color: white;
-}
-.footer .text span
-{
-    color: var(--main-color);
-    font-weight: bold;
-}
-
-.footer .overlay
+/* .footer .overlay
 {
     position: absolute;
     top: 0;
@@ -619,16 +872,112 @@ form button:hover
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 20%);
-}
-.footer .icons
-{
+} */
+
+
+/*  */
+
+.footer{
+    background-image: url(../Images/food-5.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding:30px 0px;
+    font-family: 'Play', sans-serif;
+    text-align:center;
+    margin-top: 30px;
+    position: block;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    /* position: relative;
+    bottom: 0;
+    width: 100%; */
+    }
+    
+    .footer .row{
+        width: 50%;
+        margin: auto;
+        color: white;
+        font-size: 15px;
+        transition:0.5s;
+        padding: 20px;
+    }
+    
+    .footer .row a{
+    text-decoration:none;
+    color:white;
+    transition:0.5s;
+    }
+    
+    .footer .row a:hover{
+    color:var(--main-color);
+
+    }
+
+    .footer .row-title
+    {
+        width: 100%;
+        margin: auto;
+        color: white;
+        font-size: 15px;
+        transition:0.5s;
+        padding: 20px;
+    }    
+    .footer .row a i{
+    font-size:2em;
+    margin:0% 1%;
+    }
+    .footer-icons a i
+    {
+        transition:0.5s;
+
+    }
+    .footer-icons a i:hover
+    {
+        color: var(--main-color);
+    }
+
+    .footer ul
+    {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    list-style: none;
     display: flex;
-    justify-content: center;
-    flex-direction: row;
-    align-items: center;
-    color: white;
-    font-size: 30px;
-}
+    justify-content: space-between;
+    width: 100%;
+    }
+    .footer-span
+    {
+        color: var(--main-color);
+        font-size: 19px;
+        font-weight: bold;
+    }
+    @media (max-width:720px){
+    .footer{
+    text-align:left;
+    padding:5%;
+    }
+    .footer .row ul li{
+    display:block;
+    margin:10px 0px;
+    text-align:left;
+    }
+    .footer .row a i{
+    margin:0% 3%;
+    }
+    }
+    .footer-icons
+    {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .footer-icons i
+    {
+        color: white;
+        font-size: 30px !important;
+    }
+    
 /* footer End */
 .CardDisplay
 {
@@ -677,11 +1026,15 @@ form button:hover
     font-size: 20px;
     font-weight: bold;
 }
+.cofod
+{
+    position: relative;
+}
  .container .total-price
 {
     display: block;
     width: 100%;
-    margin: auto;
+    margin: 10px auto 80px;
     background-color: var(--main-color);
     text-align: center;
     color: white;
@@ -694,72 +1047,71 @@ form button:hover
     font-weight: bold;
     font-size: 30px;
 }
-
-
-/* Comments Start */
-.comments
+/* about-us Start */
+.about-us
 {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+    margin-top: 50px;
 }
-.comments .media
+.about-us h1
 {
     position: relative;
-    margin-bottom: 30px;
+color: var(--main-color);
+font-size: 30px;
+font-weight: bold;
 }
-.comments .media .mediaImg
+.about-us h1::after
 {
-    border-radius: 50%;
-    height: 67px;
-    width: 68px;
+    content: '';
+    background-color: var(--main-color);
+    position: absolute;
+    width: 161px;
+    height: 3px;
+    bottom: -11px;
+    left: 0;
 }
-.comments .media .mediaName
+.about-us h3
 {
+    font-family: 'Amatic SC';
     color: var(--main-color);
-    font-weight: bold;
-    margin: auto;
+    margin-top: 30px;
 }
-.comments .media .mediaText
+.about-us .about-us-text
 {
 color: #777;
 }
+.about-us .images
+{
+    max-width: 80%;
+    
+    margin: 100px auto 60px;
+}
+.about-us .images img
+{
+    width: 300px;
+    height: 343px;
+    margin-bottom: 10px;
 
-.media .dropdown
-{
-    position: absolute;
-    right: 0;
-    font-size: 20px;
-    top: -10px;
-    font-size: 10px !important;
 }
-.media .del
-{
-    background-color: var(--main-color);
-    color: white;
-    position: absolute;
-    right: -10px;
-    top: -8px;
-    padding: 2px;
-    border-radius: 50%;
-    font-weight: bold;
-    height: 27px;
-    width: 22px;
-    text-align: center;
-    cursor: pointer;
-}
+/* about-us End */
+
 
   /* Comments End */
 @media(width <= 700px)
 {
+    .Menus-Nav label
+    {
+        font-size: 15px;
+    }
     .food-display .card
     {
         flex-basis: 100% !important;
     }
     .header-section .text
     {
-        font-size: 24px;
-    }
+        font-size: 15px;
+        top: -32px;
+        line-height: 31px;
+        left: 0;    }
     .services .service
     {
         margin: 40px auto;
@@ -768,6 +1120,7 @@ color: #777;
     {
         flex-basis: 60% !important;
         margin: 30px auto;
+        min-width: 86%;
     }
         .contact-us .container .card
     {
@@ -780,7 +1133,28 @@ color: #777;
     left: 24%;
     }
 }
+@media(500px< width <= 840px)
+{
+    .Menus-Nav label
+    {
+        font-size: 20px;
+    }
+}
 
+@media (max-width: 720px) {
+    .footer
+    {
+        text-align: center;
+    }
+    .footer  .footer-icons
+    {
+        margin: auto;
+    }
+    .footer .row
+    {
+        margin: 0;
+    }
+}
 
 @media(700px < width <= 992px  )
 {
@@ -796,10 +1170,32 @@ color: #777;
     {
         flex-basis: 60% !important;
         margin: 30px auto;
+        min-width: 700px;
         }
     .contact-us .container .card
     {
         flex-basis: 60% !important;
         margin: 30px auto;    
+    }
+    .contact-card-img {
+        height: 349px;
+        width: 252px;
+    }
+}
+@media(775px > width   )
+{
+    .contact-card-img {
+        display: none;
+    }
+}
+
+@media(700px < width <= 1054px )
+{
+    .header-section .text
+    {
+        font-size: 16px;
+        top: -8px;
+        line-height: 44px;
+        left: 0;
     }
 }
