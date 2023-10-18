@@ -119,8 +119,6 @@ function RenderSubTotal()
         <p class="totaly">Total Price is : ${totalPrice.toFixed(2)}$</p><p class="totalItems">(${totlaItems})Items</p>
         `
         }
- 
-    
     })
     SendPrice(totalPrice , totlaItems);
 }
@@ -206,6 +204,8 @@ function SendPrice(totalprice , totalItems)
 
 function GetFromStorage()
 {
+    let FoodDisplay = document.querySelector(".food-display");
+
     let getFood = localStorage.getItem("Foods");
     getFood = JSON.parse(getFood);
     if(getFood)
@@ -222,7 +222,6 @@ function GetFromStorage()
     RenderFoodType()
 }
 GetFromStorage()
-
 
 
 // Swiper Start
