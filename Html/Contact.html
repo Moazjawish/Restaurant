@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Css File -->
-    <link rel="stylesheet" href="/Css/style.css" />
+    <link rel="stylesheet" href="../Css/style.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
@@ -93,39 +93,43 @@
             <p>Couldn’t find an answer in the Help Center? We’ll start with some questions and get you to the right place.
                 Log in to get personalized support</p>
         </div>
+
         <!-- contact_header End -->
 
-        <form onsubmit="sendEmail();reset();return false"  >
-            
+        <form class="form_validation">
             <div class="form-group">
-            <label for="Fname">First Name</label>
-            <input type="text" class="form-control" id="Fname" placeholder="first name" required>
+            <label for="form_first_name">First Name</label>
+            <input type="text" class="form-control" id="form_first_name" placeholder="first name" >
+            <p class="Error"></p>
             </div>
 
             <div class="form-group">
-            <label for="Sname">Second Name</label>
-            <input type="text" class="form-control" id="Sname" placeholder="Second name"  >
+            <label for="form_second_name">Second Name</label>
+            <input type="text" class="form-control" id="form_second_name" placeholder="Second name"  >
+            <p class="Error"></p>
             </div>
 
             <div class="form-group">
-                <label for="Email">Email address</label>
-                <input type="email" class="form-control" id="Email" placeholder="Email-address" required >
+                <label for="form_emial">Email address</label>
+                <input type="email" class="form-control" id="form_emial" placeholder="Email-address"   >
                 <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                <p class="Error"></p>
                 </div>
 
             <div class="form-group">
-            <label for="Msg">Your message</label>
-            <textarea cols="20" rows="5"  class="form-control" id="Msg"></textarea>
+            <label for="form_message">Your message</label>
+            <textarea cols="20" rows="5"  class="form-control" id="form_message"></textarea>
+            <p class="Error"></p>
             </div>
 
             <div class="form-group form-check">
             </div>
             <button type="submit" class="btn sub">Submit</button>
-
         </form>
- 
       </div>
- 
+
+
+
         <div class="card contact-us-card mb-3" style="max-width: 540px;">
           <div class="row no-gutters">
             <div class="col-md-6">
@@ -163,15 +167,6 @@
 
 </div>
 
-<!-- <div class="footer">
-  <div class="overlay"></div>
-  <div class="text">
-      <i class='fa fa-cutlery'></i>
-      <p>© 2022 <span>Ratatoiulle </span>All Right Reserved</p>
-  </div>
-</div>  -->
-
-<!--  -->
 
 <footer>
   <div class="footer">
@@ -199,10 +194,12 @@
   </footer>
 
 
+
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="../Js/Main.js"></script>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/printThis/1.15.0/printThis.min.js"></script>
     <script src="https://smtpjs.com/v3/smtp.js"></script> -->
       <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js"></script>
+ 
 </body>
 </html>

@@ -1,0 +1,4 @@
+1- All fields are fully  =>  reset.
+2- One of the fielsd at least is empty  =>  Error && prevent.
+    - when we start to write in the fields the Error Msg will be hidden. 
+    
